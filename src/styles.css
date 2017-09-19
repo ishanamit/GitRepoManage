@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+.footer{
+    background:black;
+    margin-bottom:1000px;
+}
+
+.footer p{
+    color:white;
+}

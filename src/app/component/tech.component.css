@@ -1,0 +1,21 @@
+.car{
+    margin:20px;
+    padding-bottom:20px;
+}
+#des{
+    height:20px;
+    margin-bottom:10px;
+}
+#image{
+    margin-top: 20px;
+    margin-bottom:10px;
+}
+
+card-group{
+    
+    height:300px;
+}
+#his{
+    text-align:center;
+    color:orange;
+}

@@ -1,0 +1,26 @@
+
+
+
+
+
+ <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+        <input type="text" class="form-control" placeholder="enter the language" [(ngModel)]="language" name="Language" id="searchbox" (keyup.enter)="searchlan()">
+        <h3>{{error1Msg}}</h3>
+        <h3><b>the top 20 most viewed repos are..</b></h3>
+    </div>
+    </div>
+    
+    <div class="row card-group">
+        <div class="col-4"  *ngFor="let lang of langs">
+            <div class="card car">
+                <a href="{{lang.html_url}}" target="_blank"><h3>{{lang.name}}</h3></a>
+                <p id="des">{{lang.description}}</p>
+                <img src="{{lang.owner.avatar_url}}" height="80px" width="80px" alt="abc" id="image">
+                <button id="save" class="btn btn-default" type=submit>Save</button>
+            </div>
+            
+        </div>
+     </div>
+</div>      

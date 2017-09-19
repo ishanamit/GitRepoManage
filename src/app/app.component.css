@@ -1,0 +1,40 @@
+#searchbox{
+    float: left;
+    margin-left: 10%;
+    width: 60%;
+
+
+}
+.add{
+    background:lightgreen;
+}
+.rout{
+    background:lightgrey
+}
+.rout a{
+    color:black;
+    margin-left:100px;
+    margin-right:300px;
+}
+#searchbutton {
+    float: left;
+    margin-left: 5px;
+}
+
+#user_details{
+
+}
+.shift{text-align:center;
+       margin:auto;
+       color:red;
+       height:100%;
+       margin-bottom:0px;    
+}
+.footer{
+    background:black;
+    margin-top:1000px;
+    margin-bottom:0px;
+}
+.footer p{
+    text-align:center;
+}

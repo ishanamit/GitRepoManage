@@ -1,0 +1,73 @@
+
+<div class="row">
+        <div class="col-md-12">
+            <form>
+               <div class="input-group" id= "input-group">
+                   <input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" name="username" id="searchbox" (keyup.enter)="browse()">
+                   <button class="btn btn-default" (click)="browse()"><span class="glyphicon glyphicon-search"></span></button>
+               </div>
+           </form>
+       </div>
+</div>
+    <div class="container">
+    <div *ngIf="user">
+            <div class="panel panel-default" id = "user_info">
+                    <div class="panel-heading">
+                        <h3>{{errorMsg}}</h3>
+                      <h3 class="panel-title" id="username"><b>{{user.name}}</b></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-5">
+                            <img src="{{user.avatar_url}}" id="image">
+                        </div>  
+                        <div class="col-sm-7">
+                            <div class="cap">
+                                <ul class="nav nav-pills" role="tabs">
+                                    <li role="show"><a href="#">Public Repo <span class="badge">{{user.public_repos}}</span></a></li>
+                                    <li role="show"><a href="#">Followers<span class="badge">{{user.followers}}</span></a></li>
+                                    <li role="show"><a href="#">Following <span class="badge">{{user.following}}</span></a></li>
+                                </ul>
+                            </div>
+                            <br>
+                            <ul class="list">
+                                <li class="listitem"><strong>Username: </strong>{{user.login}}</li>
+                                <li class="listitem"><strong>Location: </strong>{{user.location}}</li>
+                                <li class="listitem"><strong>Email: </strong>{{user.email}}</li>
+                                <li class="listitem"><strong>Blog: </strong>{{user.blog}}</li>
+                                <li class="listitem"><strong>Member From: </strong>{{user.created_at}}</li>
+                            </ul>
+                        </div> 
+                    </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title his">Repos Of {{user.name}}</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div *ngFor="let repo of repos">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <a href="{{repo.html_url}}" target="_blank"><h3>{{repo.name}}</h3></a>
+                                        <p>{{repo.description}}</p>
+                                        
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <a href="#">Watchers <span class="badge">{{repo.watcher}}</span></a>
+                                            <a href="#">Fork <span class="badge">{{repo.forks}}</span></a>
+
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
